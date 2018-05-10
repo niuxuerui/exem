@@ -1,0 +1,61 @@
+@import "./mixin.scss";
+$m:100%;
+body {
+    font-size: 0.32rem;
+}
+
+.wrap {
+    @include wh($m, $m);
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    @include wh($m, pxTorem(40px));
+    line-height: pxTorem(40px);
+    border-bottom: 1px solid #ccc;
+    .search {
+        @include wh($m, pxTorem(40px));
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .hbox {
+            @include wh( pxTorem(180px), pxTorem(20px));
+            border: 1px solid #ccc;
+            input {
+                display: block;
+                border: none;
+                background: transparent;
+                @include wh($m, $m);
+            }
+        }
+    }
+}
+
+.zibtn {
+    display: flex;
+    @include wh($m, pxTorem(40px));
+    line-height: pxTorem(40px);
+    border-bottom: 1px solid #ccc;
+    span {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+footer {
+    @include wh($m, pxTorem(40px));
+    line-height: pxTorem(40px);
+    display: flex;
+    border-top: 1px solid #ccc;
+    a {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+section {
+    flex: 1;
+    @include wh($m, $m);
+    overflow: hidden;
+}

@@ -1,0 +1,198 @@
+@import "./mixin.scss";
+$m:100%;
+body {
+    font-size: 0.32rem;
+}
+
+//最大的盒子
+.wrap {
+    @include wh($m, $m);
+    display: flex;
+    flex-direction: column;
+}
+
+//头部
+header {
+    @include wh($m, pxTorem(40px));
+    line-height: pxTorem(40px);
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 0 pxTorem(14px) 0 pxTorem(20px);
+    .hbox {
+        @include wh($m, $m);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        i {
+            font-size: pxTorem(16px);
+        }
+        .h-right {
+            flex-shrink: 0;
+            @include wh(pxTorem(60px), pxTorem(20px));
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .tan {
+                @include wh(pxTorem(20px), pxTorem(20px));
+                border-radius: 50%;
+                background: rgb(0, 110, 255);
+                text-align: center;
+                line-height: pxTorem(15px);
+                i {
+                    color: #fff;
+                    font-size: pxTorem(10px);
+                }
+            }
+        }
+    }
+}
+
+//脚
+footer {
+    @include wh($m, pxTorem(40px));
+    line-height: pxTorem(40px);
+    display: flex;
+    border-top: 1px solid #ccc;
+    a {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+//内容
+section {
+    flex: 1;
+    @include wh($m, $m);
+    overflow: hidden;
+}
+
+.bigbox {
+    display: flex;
+    flex-direction: column;
+    @include wh($m, $m);
+    overflow: hidden;
+    .btnbox {
+        margin-top: pxTorem(15px);
+        flex-shrink: 0;
+        @include wh($m, pxTorem(72px));
+        box-sizing: border-box;
+        padding: 0 pxTorem(34px);
+        .nana {
+            position: relative;
+            @include wh($m, $m);
+        }
+        .btns {
+            @include wh($m, $m);
+            display: flex;
+            justify-content: space-between;
+            .swiper-pagination-bullet-active {
+                background: #fff;
+                i {
+                    color: red;
+                }
+            }
+            .swiper-pagination-bullet {
+                opacity: 1;
+                background: #fff;
+            }
+            dl {
+                flex-shrink: 0;
+                @include wh(pxTorem(50px), $m);
+                dt {
+                    @include wh($m, pxTorem(50px));
+                    text-align: center;
+                    line-height: pxTorem(50px);
+                    border: 1px solid #ccc;
+                    border-radius: 50%;
+                    i {
+                        font-size: pxTorem(20px);
+                    }
+                }
+                dd {
+                    @include wh($m, pxTorem(22px));
+                    line-height: pxTorem(22px);
+                    text-align: center;
+                    font-size: pxTorem(10px);
+                }
+            }
+        }
+    }
+    .tabbox {
+        flex: 1;
+        @include wh($m, $m);
+        overflow: hidden;
+        .banner1 {
+            @include wh($m, $m);
+            .page1,
+            .page2,
+            .page3,
+            .page4 {
+                @include wh($m, $m);
+            }
+            .page1 {
+                background: #fff;
+                overflow: scroll;
+            }
+            .page2 {
+                background: rgb(255, 238, 0);
+            }
+            .page3 {
+                background: rgb(0, 174, 255);
+            }
+            .page4 {
+                background: rgb(166, 255, 0);
+            }
+        }
+    }
+}
+
+.page1scroll {
+    width: 100%;
+    .info {
+        @include wh($m, pxTorem(360px));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            width: pxTorem(180px);
+            text-align: center;
+        }
+    }
+    .page1footer {
+        @include wh($m, pxTorem(40px));
+        box-sizing: border-box;
+        padding: 0 pxTorem(40px);
+        .p1fbox {
+            position: relative;
+            @include wh($m, $m);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .me {
+                position: absolute;
+                left: 0;
+                top: 0;
+                align-self: flex-start;
+                @include wh(pxTorem(40px), pxTorem(40px));
+                border-radius: 50%;
+                text-align: center;
+                line-height: pxTorem(40px);
+                border: 1px solid #000;
+                i {
+                    font-size: pxTorem(20px);
+                }
+            }
+            .mer {
+                flex-shrink: 0;
+                @include wh(pxTorem(154px), pxTorem(40px));
+                border-radius: pxTorem(20px);
+                text-align: center;
+                line-height: pxTorem(40px);
+                border: 1px solid #000;
+                i {
+                    font-size: pxTorem(20px);
+                }
+            }
+        }
+    }
+}

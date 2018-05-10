@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/swiper.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="./css/swiper.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/mystyle.css">
+
+    <title>Document</title>
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + "px"
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <header>
+            <div class="hbox">
+                <i class="iconfont icon-zuojiantou"></i>
+                <span>无连接</span>
+                <div class="h-right">
+                    <i class="iconfont icon-wenjuan"></i>
+                    <a class="tan" href="javascript:;">
+                        <i class="iconfont icon-paizhao"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="bigbox">
+                <div class="btnbox">
+                    <div class="nana">
+                        <div class="btns swiper-pagination">
+                            <!-- <dl>
+                                        <dt class="active">
+                                                        <i class="iconfont icon-paizhao"></i>
+                                                </dt>
+                                        <dd>电源</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                                            <i class="iconfont icon-paizhao"></i>
+                                                    </dt>
+                                        <dd>首页</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                                                <i class="iconfont icon-paizhao"></i>
+                                                        </dt>
+                                        <dd>菜单</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                                                    <i class="iconfont icon-paizhao"></i>
+                                                            </dt>
+                                        <dd>截屏</dd>
+                                    </dl> -->
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="tabbox">
+                    <div class="swiper-container banner1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide page1box">
+                                <div class="page1">
+                                    <div class="page1scroll">
+                                        <div class="info">
+                                            <p>滑动控制上下左右，点击确定长按调节电视音量</p>
+                                        </div>
+                                        <div class="page1footer">
+                                            <div class="p1fbox">
+                                                <div class="me">
+                                                    <i class="iconfont icon-shequ"></i>
+                                                </div>
+                                                <div class="mer">
+                                                    <i class="iconfont icon-kuaidichaxun"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide page2box">
+                                <div class="page2"></div>
+                            </div>
+                            <div class="swiper-slide page3box">
+                                <div class="page3"></div>
+                            </div>
+                            <div class="swiper-slide page4box">
+                                <div class="page4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- <footer>
+
+        </footer> -->
+    </div>
+</body>
+
+</html>
+<script src="./js/flexible.js"></script>
+<script src="./js/swiper.js"></script>
+<script>
+    var banner1 = new Swiper(".banner1", {
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function(index, classname) {
+                var str = ``;
+
+                switch (index) {
+                    case 0:
+                        str += `<dl class=" ${classname}">
+                        <dt >
+                                            <i class="iconfont icon-shequ"></i>
+                                    </dt>
+                            <dd>电源</dd>
+                             </dl>`;
+                        break;
+                    case 1:
+                        str += `<dl class=" ${classname}">
+                            <dt >
+                                                <i class="iconfont icon-shequ"></i>
+                                        </dt>
+                                <dd>首页</dd>
+                                 </dl>`;
+                        break;
+                    case 2:
+                        str += `<dl class=" ${classname}">
+                            <dt >
+                                                <i class="iconfont icon-shequ"></i>
+                                        </dt>
+                                <dd>菜单</dd>
+                                 </dl>`;
+                        break;
+                    case 3:
+                        str += `<dl class=" ${classname}">
+                            <dt >
+                                                <i class="iconfont icon-shequ"></i>
+                                        </dt>
+                                <dd>截屏</dd>
+                                 </dl>`;
+                        break;
+                }
+
+
+                return str;
+            }
+
+        }
+    })
+</script>
