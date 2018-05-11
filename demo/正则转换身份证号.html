@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .err {
+        width: 300px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background: rgb(255, 217, 0);
+        color: green;
+    }
+    
+    .show {
+        width: 300px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        background: rgb(8, 233, 195);
+        color: #fff;
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <div>
+            <input class="in" type="text" placeholder="请输入身份证号码">
+            <button class="btn" type="button">转化</button>
+        </div>
+        <div class="err">
+            输入的号码会被转化，如下
+        </div>
+        <div class="show"></div>
+</body>
+
+</html>
+<script src="./zhuan.js"></script>
+<script>
+    let input = document.querySelector(".in"),
+        btn = document.querySelector(".btn"),
+        show = document.querySelector(".show");
+    btn.onclick = function() {
+        var val = input.value;
+        val = z(val); //处理字符串
+        show.innerHTML = val;
+    }
+</script>
