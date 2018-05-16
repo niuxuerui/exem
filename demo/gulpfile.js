@@ -26,3 +26,6 @@ gulp.task("watch", function() {
     gulp.watch("./src/scss/*.scss", ["css"])
 });
 gulp.task("default", ["server", "watch"]);
+
+//添加到bulid
+//html的MD5证书
