@@ -1,0 +1,24 @@
+@import "./mixin.scss";
+$m:100%;
+$headerColor:green;
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html,
+body {
+    @include wh($m, $m);
+    overflow: hidden;
+}
+
+.wrap {
+    @include wh($m, $m);
+}
+
+header {
+    @include wh($m, pxTorem(40px));
+    background: green;
+    color: #fff
+}
